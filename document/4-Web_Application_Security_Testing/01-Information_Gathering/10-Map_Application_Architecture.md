@@ -16,7 +16,7 @@ Modern web applications can vary significantly in complexity, from a simple scri
 
 ## How to Test
 
-When testing from a black box perspective, it is important to try and build up a clear picture of how the application works, and which technologies and components are in place. In some cases it is possible to test for specific components (such as a web application firewall), while others can be identified by inspecting the behaviour of the application.
+When testing from a black box perspective, it is important to try and build up a clear picture of how the application works, and which technologies and components are in place. In some cases it is possible to test for specific components (such as a web application firewall), while others can be identified by inspecting the behavior of the application.
 
 The sections below provide a high-level overview of common architectural components, along with details of how they can be identified.
 
@@ -60,7 +60,7 @@ Many applications store static content on dedicated storage platforms, rather th
 - Amazon S3 Buckets are either `BUCKET.s3.amazonaws.com` or `s3.REGION.amazonaws.com/BUCKET`
 - Azure Storage Accounts are `ACCOUNT.blob.core.windows.net`
 
-These storage accounts can often exposes sensitive files, as discussed in the [Testing Cloud Storage Guide](../02-Configuration_and_Deployment_Management_Testing/11-Test_Cloud_Storage.md) section.
+These storage accounts can often expose sensitive files, as discussed in the [Testing Cloud Storage Guide](../02-Configuration_and_Deployment_Management_Testing/11-Test_Cloud_Storage.md) section.
 
 #### Database
 
@@ -140,7 +140,7 @@ They may also be indicated by the presence of specific cookies (for example, F5 
 
 #### Content Delivery Network (CDN)
 
-A Content Delivery Network (CDN) is a geographically distributed set of caching proxy servers, designed to improve website performance to to provide additional resilience for a website.
+A Content Delivery Network (CDN) is a geographically distributed set of caching proxy servers, designed to improve website performance to provide additional resilience for a website.
 
 It is typically configured by pointing the publicly facing domain to the CDN's servers, and then configuring the CDN to connect to the correct back end servers (sometimes known as the "origin").
 
@@ -168,7 +168,7 @@ Most web servers will be protected by a packet filtering or stateful inspection 
 
 If the majority of the ports are shown as "closed" (i.e, they return a `RST` packet in response to the initial `SYN` packet) then this suggests that the server may not be protected by a firewall. If the ports are shown as "filtered" (i.e, no response is received when sending a `SYN` packet to an unused port) then a firewall is most likely to be in place.
 
-Additionally, if inappropriate services are exposed to the world (such as SMTP, IMAP, MySQL, etc), this suggests that either there is not firewall in place, or that the firewall is badly configured.
+Additionally, if inappropriate services are exposed to the world (such as SMTP, IMAP, MySQL, etc), this suggests that either there is no firewall in place, or that the firewall is badly configured.
 
 #### Network Intrusion Detection and Prevention System
 
@@ -178,7 +178,7 @@ An IPS can usually be detected by running automated scanning tools (such as a po
 
 #### Web Application Firewall (WAF)
 
-A Web Application Firewall (WAF) inspects the contents of HTTP requests and blocks those that appear to be suspicious or malicious, or dynamically apply other controls such as CAPTCHA or rate limiting. They are usually based on a set of known bad signatures and regular expressions, such as the [OWASP Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/).  WAFs can be effective at protecting against some types of attacks (such as SQL injection or cross-site scripting), but are less effective against other types (such as access control or business logic related issues).
+A Web Application Firewall (WAF) inspects the contents of HTTP requests and blocks those that appear to be suspicious or malicious, or dynamically apply other controls such as CAPTCHA or rate limiting. They are usually based on a set of known bad signatures and regular expressions, such as the [OWASP Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/). WAFs can be effective at protecting against some types of attacks (such as SQL injection or cross-site scripting), but are less effective against other types (such as access control or business logic related issues).
 
 A WAF can be deployed in multiple locations, including:
 

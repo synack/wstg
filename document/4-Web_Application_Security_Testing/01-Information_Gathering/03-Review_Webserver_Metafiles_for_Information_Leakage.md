@@ -11,7 +11,7 @@ This section describes how to test various metadata files for information leakag
 ## Test Objectives
 
 - Identify hidden or obfuscated paths and functionality through the analysis of metadata files.
-- Extract and map other information that could lead to better understanding of the systems at hand.
+- Extract and map other information that could lead to a better understanding of the systems at hand.
 
 ## How to Test
 
@@ -143,7 +143,7 @@ Exploring from there a tester may wish to retrieve the gmail sitemap `https://ww
 
 ### Security TXT
 
-`security.txt` is a [proposed standard](https://securitytxt.org/) which allows websites to define security policies and contact details. There are multiple reasons this might be of interest in testing scenarios, including but not limited to:
+[security.txt](https://securitytxt.org) was ratified by the IETF as [RFC 9116 - A File Format to Aid in Security Vulnerability Disclosure](https://www.rfc-editor.org/rfc/rfc9116.html) which allows websites to define security policies and contact details. There are multiple reasons this might be of interest in testing scenarios, including but not limited to:
 
 - Identifying further paths or resources to include in discovery/analysis.
 - Open Source intelligence gathering.
@@ -170,7 +170,7 @@ Policy: https://www.linkedin.com/help/linkedin/answer/62924
 
 ### Humans TXT
 
-`humans.txt` is an initiative for knowing the people behind a website. It takes the form of a text file that contains information about the different people who have contributed to building the website. See [humanstxt](http://humanstxt.org/) for more info. This file often (though not always) contains information for career or job sites/paths.
+`humans.txt` is an initiative for knowing the people behind a website. It takes the form of a text file that contains information about the different people who have contributed to building the website. This file often (though not always) contains information for career or job sites/paths.
 
 The following example was retrieved from Google 2020 May 05:
 
@@ -184,7 +184,7 @@ Google is built by a large team of engineers, designers, researchers, robots, an
 
 There are other RFCs and Internet drafts which suggest standardized uses of files within the `.well-known/` directory. Lists of which can be found [here](https://en.wikipedia.org/wiki/List_of_/.well-known/_services_offered_by_webservers) or [here](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml).
 
-It would be fairly simple for a tester to review the RFC/drafts are create a list to be supplied to a crawler or fuzzer, in order to verify the existence or content of such files.
+It would be fairly simple for a tester to review the RFC/drafts and create a list to be supplied to a crawler or fuzzer, in order to verify the existence or content of such files.
 
 ## Tools
 

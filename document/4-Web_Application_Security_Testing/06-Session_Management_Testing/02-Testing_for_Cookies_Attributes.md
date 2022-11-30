@@ -72,7 +72,7 @@ Unlike [session cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cooki
 
 #### SameSite Attribute
 
-The [`SameSite`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies) attribute is used to assert that a cookie ought not to be sent along with cross-site requests. This feature allows the server to mitigate the risk of cross-orgin information leakage. In some cases, it is used too as a risk reduction (or defense in depth mechanism) strategy to prevent [cross-site request forgery](05-Testing_for_Cross_Site_Request_Forgery.md) attacks. This attribute can be configured in three different modes:
+The [`SameSite`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies) attribute can be used to assert whether a cookie should be sent along with cross-site requests. This feature allows the server to mitigate the risk of cross-origin information leakage. In some cases, it is used too as a risk reduction (or defense in depth mechanism) strategy to prevent [cross-site request forgery](05-Testing_for_Cross_Site_Request_Forgery.md) attacks. This attribute can be configured in three different modes:
 
 - `Strict`
 - `Lax`
@@ -88,7 +88,7 @@ The `Lax` value is less restrictive than `Strict`. The cookie will be sent if th
 
 ##### None Value
 
-The `None` value specifies that the browser will send the cookie on cross-site requests (the normal behavior before the implementation of `SamseSite`) only if the `Secure` attribute is also used, _e.g._ `SameSite=None; Secure`. It is a recommended value, instead of not specifying any `SameSite` value, as it forces the use of the [`secure` attribute](#secure-attribute).
+The `None` value specifies that the browser will send the cookie in all contexts, including cross-site requests (the normal behavior before the implementation of `SameSite`). If `Samesite=None` is set, then the Secure attribute must be set, otherwise modern browsers will ignore the SameSite attribute, _e.g._ `SameSite=None; Secure`.
 
 ### Cookie Prefixes
 
@@ -101,7 +101,7 @@ The [`__Host-`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Cookie
   1. The cookie must be set with the [`Secure` attribute](#secure-attribute).
   2. The cookie must be set from a URI considered secure by the user agent.
   3. Sent only to the host who set the cookie and MUST NOT include any [`Domain` attribute](#domain-attribute).
-  4. The cookie must be set with the [`Path`attribute](#path-attribute) with a value of `/` so it would be sent to every request to the host.
+  4. The cookie must be set with the [`Path` attribute](#path-attribute) with a value of `/` so it would be sent with every request to the host.
 
 For this reason, the cookie `Set-Cookie: __Host-SID=12345; Secure; Path=/` would be accepted while any of the following ones would always be rejected:
 `Set-Cookie: __Host-SID=12345`

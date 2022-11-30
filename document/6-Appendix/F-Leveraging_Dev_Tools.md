@@ -174,7 +174,7 @@ All major browsers support manipulating CSS leveraging the Dev Tools Console and
 ### Mozilla Firefox
 
 1. On the dev tools `Debugger` tab, click on the settings gear button in the upper right corner of the developer toolbar.
-2. Select `Disable JavaScript` from the dropdown (this is an enable/disable menu item, when JavaScript is disabled the meny item has a check mark).
+2. Select `Disable JavaScript` from the dropdown (this is an enable/disable menu item; when JavaScript is disabled, the menu item has a check mark).
 
 ## View HTTP Headers
 
@@ -269,7 +269,7 @@ All major browsers support encoding and decoding strings in various ways leverag
 
 1. Click the `Responsive Design Mode` button or press `ctrl` + `shift` + `m`.
 
-![Responsive Design Mode in Mozilla Firefo](images/f_firefox_responsive_design_mode.png)\
+![Responsive Design Mode in Mozilla Firefox](images/f_firefox_responsive_design_mode.png)\
 *Figure 6.F-9: Mozilla Firefox Responsive Design Mode*
 
 ## References

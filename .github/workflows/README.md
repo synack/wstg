@@ -1,5 +1,12 @@
 # Workflows Documentation
 
+## `build-checklists.yml`
+
+For building checklists and Create a PR with changes made in the master.
+
+- Trigger: Push, Only when files inside document directory is changed. Manual (`workflow_dispatch`), GitHub web UI.
+- See: `/.github/xlsx/` in the root of the repository for XLSX build.
+
 ## `build-pdf.yml`
 
 For building PDFs at release.
@@ -33,12 +40,6 @@ Checks Markdown files for spelling style and typo issues.
 
 - Trigger: Pull Requests.
 - Config File: `.textlintrc`
-
-## `refresh-stale`
-
-Comments on issues and PRs that have been inactive for 30 days and reapplies the "help wanted" label.
-
-- Trigger: Schedule, midnight daily.
 
 ## `www_latest_update.yml`
 

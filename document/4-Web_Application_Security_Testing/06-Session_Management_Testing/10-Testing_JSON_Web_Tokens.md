@@ -6,7 +6,7 @@
 
 ## Summary
 
-JSON Web Tokens (JWTs) are cryptographically signed JSON tokens, intended to share claims between systems. They are are frequently used as authentication or session tokens, particularly on REST APIs.
+JSON Web Tokens (JWTs) are cryptographically signed JSON tokens, intended to share claims between systems. They are frequently used as authentication or session tokens, particularly on REST APIs.
 
 JWTs are a common source of vulnerabilities, both in how they are in implemented in applications, and in the underlying libraries. As they are used for authentication, a vulnerability can easily result in a complete compromise of the application.
 
@@ -115,7 +115,21 @@ The header and payload are then re-encoded with Base64, and the signature is rem
 eyJhbGciOiAibm9uZSIsICJ0eXAiOiAiSldUIn0K.eyJ1c2VybmFtZSI6ImFkbWluaW5pc3RyYXRvciIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjIsImV4cCI6MTUxNjI0MjYyMn0.
 ```
 
-Some implementation try and avoid this by explicitly blocking the use of the `none` algorithm. If this is done in a case-insensitive way, it may be possible to bypass by specifying an algorithm such as `NoNe`.
+Some implementations try and avoid this by explicitly blocking the use of the `none` algorithm. If this is done in a case-insensitive way, it may be possible to bypass by specifying an algorithm such as `NoNe`.
+
+#### ECDSA "Psychic Signatures"
+
+A vulnerability was identified in Java version 15 to 18 where they did not correctly validate ECDSA signatures in some circumstances ([CVE-2022-21449](https://neilmadden.blog/2022/04/19/psychic-signatures-in-java/), known as "psychic signatures"). If one of these vulnerable versions is used to parse a JWT using the `ES256` algorithm, this can be used to completely bypass the signature verification by tampering the body and then replacing the signature with the following value:
+
+```txt
+MAYCAQACAQA
+```
+
+Resulting in a JWT which looks something like this:
+
+```txt
+eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6InRydWUifQ.MAYCAQACAQA
+```
 
 ### Weak HMAC Keys
 

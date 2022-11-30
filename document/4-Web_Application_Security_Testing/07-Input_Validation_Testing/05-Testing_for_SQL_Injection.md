@@ -491,7 +491,7 @@ Char() function can be used to replace English char. For example, char(114,111,1
 
 `' UNION SELECT password FROM Users WHERE name='root'--`
 
-To apply the Char(), the SQL injeciton statement will be
+To apply the Char(), the SQL injection statement will be
 
 `' UNION SELECT password FROM Users WHERE name=char(114,111,111,116)--`
 
@@ -546,6 +546,14 @@ OR 'SQLi' = N'SQLi'
 1 || 1 = 1
 1 && 1 = 1
 ```
+
+### SQL Wildcard Injection
+
+Most SQL dialects support both single-character wildcards (usually "`?`" or "`_`") and multi-character wildcards (usually "`%`" or "`*`"), which can be used in queries with the `LIKE` operator. Even when appropriate controls (such as parameters or prepared statements) are used to protect against SQL injection attacks, it may be possible to inject wildcards into queries.
+
+For example, if a web application allows users to enter a discount code as part of the checkout process, and it checks whether this code exists in the database using a query such as `SELECT * FROM discount_codes WHERE code LIKE ':code'`, then entering a value of `%` (which would be inserted in place of the `:code` parameter) would match all of the discount codes.
+
+This technique could also be used to determine exact discount codes through increasingly specific queries (such as `a%`, `b%`, `ba%`, etc).
 
 ## Remediation
 

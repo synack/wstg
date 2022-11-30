@@ -104,16 +104,16 @@ If the application doesn't validate the request, we can obtain the following res
 
 In this case, we have successfully performed an OS injection attack.
 
-## Special Characters for Comand Injection
+## Special Characters for Command Injection
 
 The following special character can be used for command injection such as `|` `;` `&` `$` `>` `<` `'` `!`
 
-- `cmd1|cmd2` : Uses of `|` will make command 2 to be executed weather command 1 execution is successful or not.
-- `cmd1;cmd2` : Uses of `;` will make command 2 to be executed weather command 1 execution is successful or not.
+- `cmd1|cmd2` : Uses of `|` will make command 2 to be executed whether command 1 execution is successful or not.
+- `cmd1;cmd2` : Uses of `;` will make command 2 to be executed whether command 1 execution is successful or not.
 - `cmd1||cmd2` : Command 2 will only be executed if command 1 execution fails.
 - `cmd1&&cmd2` : Command 2 will only be executed if command 1 execution succeeds.
 - `$(cmd)` : For example, `echo $(whoami)` or `$(touch test.sh; echo 'ls' > test.sh)`
-- `cmd` : It's used to execute specific command. For example, `whoami`
+- `cmd` : It's used to execute a specific command. For example, `whoami`
 - `>(cmd)`: `>(ls)`
 - `<(cmd)`: `<(ls)`
 

@@ -34,6 +34,7 @@
 				"jQuery",
 				"LinkedIn",
 				"Lodash",
+				"Nmap",
 				"MacBook",
 				"Markdown",
 				"OpenType",
@@ -46,6 +47,7 @@
 				"Wasm",
 				"WebAssembly",
 				"WebStorm",
+				"Wikipedia",
 				"WordPress",
 				"YouTube",
 				[
@@ -129,6 +131,10 @@
 					"backward compatible"
 				],
 				[
+					"behaviour(s)?",
+					"behavior$1"
+				],
+				[
 					"build system(s)?",
 					"build tool$1"
 				],
@@ -161,6 +167,10 @@
 					"their"
 				],
 				[
+					"organisation(s|'s)?",
+					"organization$1"
+				],
+				[
 					"repo\\b",
 					"repository"
 				],
@@ -178,8 +188,8 @@
 					"spread syntax"
 				],
 				[
-					"re-direct",
-					"redirect"
+					"re-direct(ing|ed)?",
+					"redirect$1"
 				],
 				[
 					"black[- ]?list(?:ed|ing)?",
@@ -516,6 +526,10 @@
 				[
 					"renegotiaion(s)?",
 					"renegotiation$1"
+				],
+				[
+					"REST-ful",
+					"RESTful"
 				],
 				[
 					"traget",
