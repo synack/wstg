@@ -132,8 +132,6 @@
 
 #### 4.4.10 [Testing for Weaker Authentication in Alternative Channel](4-Web_Application_Security_Testing/04-Authentication_Testing/10-Testing_for_Weaker_Authentication_in_Alternative_Channel.md)
 
-#### 4.4.11 [Testing Multi-Factor Authentication](4-Web_Application_Security_Testing/04-Authentication_Testing/11-Testing_Multi-Factor_Authentication.md)
-
 ### 4.5 [Authorization Testing](4-Web_Application_Security_Testing/05-Authorization_Testing/README.md)
 
 #### 4.5.1 [Testing Directory Traversal File Include](4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include.md)
@@ -143,12 +141,6 @@
 #### 4.5.3 [Testing for Privilege Escalation](4-Web_Application_Security_Testing/05-Authorization_Testing/03-Testing_for_Privilege_Escalation.md)
 
 #### 4.5.4 [Testing for Insecure Direct Object References](4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Insecure_Direct_Object_References.md)
-
-#### 4.5.5 [Testing for OAuth Weaknesses](4-Web_Application_Security_Testing/05-Authorization_Testing/05-Testing_for_OAuth_Weaknesses.md)
-
-##### 4.5.5.1 [Testing for OAuth Authorization Server Weaknesses](4-Web_Application_Security_Testing/05-Authorization_Testing/05.1-Testing_for_OAuth_Authorization_Server_Weaknesses.md)
-
-##### 4.5.5.2 [Testing for OAuth Client Weaknesses](4-Web_Application_Security_Testing/05-Authorization_Testing/05.2-Testing_for_OAuth_Client_Weaknesses.md)
 
 ### 4.6 [Session Management Testing](4-Web_Application_Security_Testing/06-Session_Management_Testing/README.md)
 
@@ -270,8 +262,6 @@
 
 #### 4.10.9 [Test Upload of Malicious Files](4-Web_Application_Security_Testing/10-Business_Logic_Testing/09-Test_Upload_of_Malicious_Files.md)
 
-#### 4.10.10 [Test Payment Functionality](4-Web_Application_Security_Testing/10-Business_Logic_Testing/10-Test-Payment-Functionality.md)
-
 ### 4.11 [Client-side Testing](4-Web_Application_Security_Testing/11-Client-side_Testing/README.md)
 
 #### 4.11.1 [Testing for DOM-Based Cross Site Scripting](4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting.md)
@@ -302,17 +292,11 @@
 
 #### 4.11.13 [Testing for Cross Site Script Inclusion](4-Web_Application_Security_Testing/11-Client-side_Testing/13-Testing_for_Cross_Site_Script_Inclusion.md)
 
-#### 4.11.14 [Testing for Reverse Tabnabbing](4-Web_Application_Security_Testing/11-Client-side_Testing/14-Testing_for_Reverse_Tabnabbing.md)
-
 ### 4.12 [API Testing](4-Web_Application_Security_Testing/12-API_Testing/README.md)
 
 #### 4.12.1 [Testing GraphQL](4-Web_Application_Security_Testing/12-API_Testing/01-Testing_GraphQL.md)
 
 ## 5. [Reporting](5-Reporting/README.md)
-
-### 5.1 [Reporting Structure](5-Reporting/01-Reporting_Structure.md)
-
-### 5.2 [Naming Schemes](5-Reporting/02-Naming_Schemes.md)
 
 ## Appendix A. [Testing Tools Resource](6-Appendix/A-Testing_Tools_Resource.md)
 

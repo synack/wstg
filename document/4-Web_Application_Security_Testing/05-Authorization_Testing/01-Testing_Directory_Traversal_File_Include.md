@@ -154,7 +154,7 @@ file= ..\..\boot.ini
 - [Path Traversal Fuzz Strings (from WFuzz Tool)](https://github.com/xmendez/wfuzz/blob/master/wordlist/Injections/Traversal.txt)
 - [OWASP ZAP](https://www.zaproxy.org/)
 - [Burp Suite](https://portswigger.net)
-- Encoding/Decoding tools
+- Enconding/Decoding tools
 - [String searcher "grep"](https://www.gnu.org/software/grep/)
 - [DirBuster](https://wiki.owasp.org/index.php/Category:OWASP_DirBuster_Project)
 

@@ -1,9 +1,0 @@
----
-
-layout: col-document
-title: WSTG - v4.3
-tags: WSTG
-
----
-
-{% include breadcrumb.html %}

@@ -5,12 +5,11 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "markdownlint-cli": "^0.31.1"
+    "markdownlint-cli": "^0.28.1"
   },
   "scripts": {
     "pdfgen": "bash ./.github/pdf/scripts/make-pdf.sh",
-    "jsongen": "bash ./.github/json/scripts/make-json.sh",
-    "xlsxgen": "python ./.github/xlsx/scripts/build-checklist.py"
+    "jsongen": "bash ./.github/scripts/make-json.sh"
   },
   "repository": {
     "type": "git",
